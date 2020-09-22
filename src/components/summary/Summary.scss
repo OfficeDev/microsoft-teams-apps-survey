@@ -1,0 +1,301 @@
+@import '../../scss/common.scss';
+
+.summary-item {
+  padding: 10px 0px;
+}
+
+.mcq-summary-item {
+  margin-bottom: 16px;
+}
+
+.question-title {
+  @extend .break-word;
+  font-weight: bold;
+  margin: 16px 0px 16px 0px;
+  .client-mobile & {
+    font-size: 14px;
+  }
+}
+
+.download-button {
+  min-width: 96px !important ;
+}
+
+.question {
+  font-weight: bold;
+}
+
+#bar-chart-div {
+  margin-top: 12px;
+}
+
+.footer-layout-right {
+  position: fixed;
+  bottom: 20px;
+  @include resolve-dir(right, 20px);
+}
+
+.primary-text {
+  font-weight: bold;
+}
+
+.list-container {
+  display: block !important;
+  height: calc(100vh - 165px);
+  width: 100%;
+  bottom: $footer-height;
+}
+
+.tabview-container {
+  margin-top: 0px;
+  padding-bottom: 0px !important;
+}
+
+.due-by-label-divider {
+  display: none !important;
+  .client-mobile & {
+    margin-top: 8px;
+    display: flex !important;
+  }
+}
+
+.title {
+  @include resolve-dir(margin-left, 12px);
+  @include resolve-dir(margin-right, 12px);
+  margin-top: 12px;
+}
+
+.group-participation-container {
+  width: 50%;
+  min-width: 250px;
+  @include resolve-dir(margin-right, 8px);
+}
+
+.reminder-button-container {
+  align-items: center;
+}
+
+.send-reminder-button {
+  .client-mobile & {
+    margin: 14px 0px;
+  }
+}
+
+.send-reminder-button-label {
+  .client-mobile & {
+    font-size: 14px;
+  }
+}
+
+.shadow-box {
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.16);
+  padding: 16px;
+  margin: 8px;
+}
+
+.title-and-menu-container {
+  justify-content: space-between;
+}
+
+.summary-header-container {
+  margin-bottom: 16px;
+}
+
+.top-container::-webkit-scrollbar {
+  display: none;
+}
+
+.responder-div {
+  flex: 1;
+  height: calc(100vh - 90px);
+}
+
+#bar-chart-div {
+  visibility: visible;
+}
+
+.footer-layout {
+  width: 100%;
+}
+
+.carousel-scroll-padding {
+  @include resolve-dir(padding-right, 20px);
+}
+
+.tab-view {
+  width: 100%;
+  margin-bottom: 8px !important;
+}
+
+.tab-view :focus{
+    color: $brand-color;
+    border-bottom-color:$brand-color
+  }
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+.underline {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.my-response {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.participation-container {
+  margin-bottom: 24px;
+  padding-top: 2px;
+}
+
+.participation-title {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+.dialog-mob {
+  width: fit-content !important;
+  margin: 20px !important;
+}
+
+.dialog-web {
+  width: min-content !important;
+}
+
+.tab-view-footer {
+  justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// used to make sure even overflow part of the div is captured.
+.html2canvas-container {
+  height: 3000px !important;
+}
+
+.due-date-dialog {
+  @extend .dialog-base;
+  width: fit-content !important;
+  @supports not (width: fit-content) {
+    width: auto !important;
+    max-width: 60% !important;
+  }
+}
+
+.stats-indicator {
+  font-size: 14px;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #ececec;
+}
+
+.average-rating-text {
+  @include resolve-dir(margin-left, 8px);
+}
+
+.star-icon-average-rating {
+  @include resolve-dir(margin-left, 4px);
+}
+
+.rating-items {
+  margin-top: 8px;
+}
+
+.questionnaire-title {
+  @extend .break-word;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.expiry-status {
+  font-size: 14px;
+  .client-mobile & {
+    font-size: 16px;
+  }
+}
+
+.non-creator-error-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.non-creator-error-image {
+  height: 200px;
+  width: 200px;
+}
+
+.non-creator-error-image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 84px;
+}
+
+.header-cover-image {
+  width: 100%;
+  height: 160px;
+}
+
+.required:after {
+  content: " *";
+  color: $error-red;
+}
+
+.question-number {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.download-button {
+  padding: 0px 8px !important;
+}
+
+.show-menu-button {
+  @include resolve-dir(border-left, 1px solid #8b8cc7 !important);
+}
+
+.question-number-container {
+  @extend .no-flex-shrink;
+  width: 24px;
+  justify-content: flex-end;
+}
+
+.yellow-color {
+  color: $yellow-color;
+}
+
+.user-response-header {
+  margin-right: 0px !important;
+}
+
+.download-your-responses-link {
+  margin-top: 8px;
+  color: $brand-color;
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.rating-drill-down:hover {
+   cursor: pointer;
+}
+
+.question-summary-text {
+   font-size: 14px;
+}

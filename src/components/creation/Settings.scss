@@ -1,0 +1,127 @@
+@import "./../../scss/common.scss";
+
+.settings-item-title {
+  font-weight: bold;
+  font-size: 100%;
+  .client-mobile & {
+    font-size: 13px;
+    padding-bottom: 8px;
+  }
+  .client-mobile.theme-default & {
+    color: #605e5c;
+  }
+}
+
+.settings-div {
+  visibility: hidden;
+}
+
+.settings-summary-footer {
+  cursor: pointer;
+}
+
+.date-picker {
+  position: absolute;
+  top: 0;
+  @include resolve-dir(left, 0px);
+  background-color: lightgray;
+}
+
+.settings-section-top-spacer {
+  margin-top: 10px;
+}
+
+.settings-radio-item {
+  .desktop-web & {
+    padding: 0px 0px 8px 0px !important;
+  }
+}
+
+.settings-radio-item-timepicker {
+  .desktop-web & {
+    padding: 0px 0px 2px 0px !important;
+  }
+}
+
+.settings-radio-item-last {
+  .desktop-web & {
+    padding: 0px !important;
+  }
+}
+
+.settings-indentation {
+  .desktop-web & {
+    @include resolve-dir(margin-left, 16px);
+  }
+}
+
+.settings-item-margin {
+  margin-bottom: 24px !important;
+  .client-mobile & {
+    margin-top: 14px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+.multi-response {
+  padding: 0px !important;
+  word-break: break-all;
+  border-color: black;
+  display: grid !important;
+  justify-content: flex-start;
+  grid-template-columns: 20px auto !important;
+  grid-gap: 2px;
+}
+
+.due-by-pickers-container {
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.horizontal-spacer {
+  width: 10px;
+}
+
+.main-view {
+  padding: 32px;
+}
+
+.settings-header-view {
+  cursor: pointer;
+}
+
+.mobile-checkbox {
+  height: 48px;
+  padding: 3px 0px !important;
+  font-size: 16px;
+  .default-theme & {
+    color: $black-color;
+  }
+}
+
+.ui-checkbox__indicator {
+  .mobile-checkbox & {
+    margin-right: 12px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ui-checkbox__indicator {
+  .mobile-checkbox.unchecked & {
+    border-color: rgb(200, 198, 196) !important;
+    border-width: 1.5px;
+  }
+}
+
+.ui-checkbox__indicator > svg {
+  .mobile-checkbox & {
+    height: 12px;
+    width: 12px;
+  }
+}
+

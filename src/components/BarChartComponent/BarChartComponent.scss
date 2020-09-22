@@ -1,0 +1,33 @@
+@import "./../../scss/common.scss";
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+}
+
+.option-bar {
+    margin-top: 4px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-color: #F3F2F1;
+}
+
+.option-bar-data {
+    margin: 10px 10px 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.option-name {
+    flex: 1;
+}
+  
+.option-percent {
+    height: 8px;
+    border-radius: 4px;
+    float: left;
+    vertical-align: middle;
+    background-color: $brand-color;
+}

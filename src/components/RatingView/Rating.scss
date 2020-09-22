@@ -1,0 +1,59 @@
+@import "../../scss/common.scss";
+
+.rating-icon {
+  color: $brand-color;
+}
+
+.disabled-rating {
+  opacity: 0.5;
+}
+
+.rating-number-unfilled {
+  width: 38px;
+  height: 8px;
+  border-radius: 4px;
+  border: solid 1px black;
+  .theme-dark &,
+  .theme-contrast & {
+    border: solid 1px white;
+  }
+}
+
+.rating-number-filled {
+  width: 38px;
+  height: 8px;
+  border-radius: 4px;
+  background: $brand-color;
+  flex-grow: 1;
+  max-width: 38px;
+  height: 8px;
+  border-radius: 4px;
+  border: solid 1px #000000;
+}
+
+.rating-number-filled {
+    flex-grow: 1;
+    max-width: 38px;
+    height: 8px;
+    border-radius: 4px;
+    border: solid 1px $brand-color;
+    background: $brand-color;
+}
+
+ .rating-icon > svg {
+   fill: $brand-color;
+ } 
+
+ .rating-scale {
+   align-items: center;
+   min-width: 0px;
+ }
+
+ .rating-icon-unfilled {
+   min-width: 0px;  
+ }
+
+ .rating-response-container {
+    margin-left: 0.5px;
+    margin-bottom: 0.5px;
+ }

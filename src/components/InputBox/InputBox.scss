@@ -1,0 +1,53 @@
+@import "./../../scss/common.scss";
+
+.invalid > input {
+  border-bottom: 1px solid $error-red;
+}
+
+.multiline-input-box {
+  & span {
+    line-height: normal;
+    &:empty:before {
+      content: attr(placeholder);
+      color: #979593;
+      display: block;
+    }
+  }
+  & textarea {
+    resize: none;
+    line-height: normal;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    .theme-default & {
+      color: #252423;
+    };
+    .theme-dark & {
+      color: #c8c6c4;
+    };
+    .theme-contrast & {
+      color: #fff;
+    }
+  }
+}
+TextArea {
+  .theme-default & {
+    color: #252423;
+  };
+  .theme-dark & {
+    color: #c8c6c4;
+  };
+  .theme-contrast & {
+    color: #fff;
+  }
+}
+Input {
+  .theme-default & {
+    color: #252423;
+  };
+  .theme-dark & {
+    color: #c8c6c4;
+  };
+  .theme-contrast & {
+    color: #fff;
+  }
+}

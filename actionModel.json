@@ -1,0 +1,16 @@
+{
+    "properties": {
+        "canAddMore": true
+    },
+    "dataTables": {
+        "canAddMore": false,
+        "values": [
+            {
+                "name": "SurveyDataTable",
+                "dataColumns": {
+                    "canAddMore": true
+                }
+            }
+        ]
+    }
+}

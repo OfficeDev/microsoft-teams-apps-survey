@@ -1,0 +1,62 @@
+@import "./../../scss/common.scss";
+
+.choice-item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.choice-title {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.choice-title-mob {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: #605e5c;
+}
+
+.choice-container {
+  padding-top: 16px;
+}
+
+.add-options {
+  margin-top: 8px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.plus-icon {
+  @include resolve-dir(margin-right, 8px);
+}
+
+.item-content {
+  font-size: 14px;
+  .client-mobile & {
+    font-size: 16px;
+  }
+  .theme-default & {
+    color: $black-color !important;
+  }
+}
+
+$trash-icon-padding: 10px;
+$trash-icon-size: 16px; // size of default icon size
+.icon-padding {
+  @include resolve-dir(padding-right, calc(#{$trash-icon-size} + 2 * #{$trash-icon-padding}) !important);
+}
+
+.choice-trash-can {
+  @include resolve-dir(right, 0px !important);
+  //padding: $trash-icon-padding;
+  &:focus {
+    outline-width: 1px !important;
+  }
+  cursor: pointer !important;
+}

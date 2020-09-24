@@ -1,32 +1,32 @@
 # Survey App Template
 
-| [Documentation](./wiki/Home.md) | [Deployment guide](./wiki/Deployment-guide.md) | [Architecture](./wiki/Solution-overview.md) |
+| [Documentation](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Home) | [Deployment guide](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Deployment-guide) | [Architecture](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Solution-overview) |
 | ---- | ---- | ---- |
 
 Survey is a custom [Teams message extension](https://docs.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) app that enables users to create a survey in a chat or a channel to ask a series of questions and get actionable insights. Use Survey for – Registrations, Enrollments, Feedback, Testimonials, Lead Capture, Reporting, Complaints and Evaluations. Survey app is supported across all platforms – Teams desktop, browser, iOS, and Android clients. It is ready for deployment as part of your existing Microsoft 365 subscription.
 
-![Survey Template compose message screen](./wiki/images/SurveyTemplateCompose.gif)
+![Survey Template compose message screen](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/images/SurveyTemplateCompose.gif)
 
 ### Key features
 * **Survey creation:** Easily create Surveys, click **Menu (…)** below the box where you type your message. Name your Survey and add questions. You can add as many questions as you want to a survey. Set a due date for the survey and restrict who can see survey results in **Settings**. When you are done, click **Send Survey** to publish your survey. 
 
-![Survey Template Creation screen](./wiki/images/SurveyTemplateCreation.png)
+![Survey Template Creation screen](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/images/SurveyTemplateCreation.png)
 
 * **Survey response:** To respond to a Survey, click **Respond** on the survey card. As people in your group or channel respond, you will see updates to the response summary on the survey card.
 
-![Survey Template Submit screen](./wiki/images/SurveyTemplateSubmit.png)
+![Survey Template Submit screen](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/images/SurveyTemplateSubmit.png)
 
 * **Survey aggregate results:** To see the aggregate results of your survey, click **View Result**. Participation Summary shows the response list along with the participants’ choices and the list of people who didn’t respond to the survey. View individual responses from your co-workers by clicking on a particular user. Also, download an image of your survey’s results or a .csv file of the response list by selecting **Download**.
 
-![Survey Template Detail screen](./wiki/images/SurveyTemplateDetail.png)
+![Survey Template Detail screen](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/images/SurveyTemplateDetail.png)
 
-![Survey Template Detail screen](./wiki/images/SurveyTemplateDetailDrillDown.png)
+![Survey Template Detail screen](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/images/SurveyTemplateDetailDrillDown.png)
 
 ## Get started
 
-Begin with the [Solution overview](./wiki/Solution-overview.md) to read about what the app does and how it works.
+Begin with the [Solution overview](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Solution-overview) to read about what the app does and how it works.
 
-When you're ready to try out Checklist, or to use it in your own organization, follow the steps in the [Deployment guide](./wiki/Deployment-guide.md).
+When you're ready to try out Checklist, or to use it in your own organization, follow the steps in the [Deployment guide](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Deployment-guide).
 
 ## Feedback
 

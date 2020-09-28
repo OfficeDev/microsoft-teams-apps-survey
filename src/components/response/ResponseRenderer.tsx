@@ -4,7 +4,7 @@
 import * as React from "react";
 import getStore, { ResponsePageViewType, ResponseViewMode } from "../../store/ResponseStore";
 import { sendResponse, resetResponse, setResponseViewMode, setCurrentView, setSavedActionInstanceRow, showResponseView, setResponseSubmissionFailed } from "../../actions/ResponseActions";
-import { Flex, Button, Text } from "@fluentui/react-northstar";
+import { Flex, Button, Text, Loader } from "@fluentui/react-northstar";
 import { ChevronStartIcon } from "@fluentui/react-icons-northstar";
 import ResponsePage from "./ResponsePage";
 import { observer } from "mobx-react";
@@ -17,7 +17,6 @@ import { Utils } from "../../utils/Utils";
 import { UxUtils } from "./../../utils/UxUtils";
 import { ProgressState } from "./../../utils/SharedEnum";
 import { ErrorView } from "./../ErrorView";
-import { LoaderUI } from "./../Loader";
 import { ActionSdkHelper } from "../../helper/ActionSdkHelper";
 
 @observer
@@ -33,7 +32,7 @@ export default class ResponseRenderer extends React.Component<any, any> {
         }
 
         if (getStore().isInitialized === ProgressState.NotStarted) {
-            return <LoaderUI fill />;
+            return <Loader />;
         } else if (getStore().isInitialized === ProgressState.Failed) {
 
             return <ErrorView

@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 /**
- * Rating questions are represented with the similar datastructure as the MCQ single select, so it is used 
+ * Rating questions are represented with the similar datastructure as the MCQ single select, so it is used
  * to differentiate between the MCQ single select and rating question types
  */
 export enum QuestionDisplayType {

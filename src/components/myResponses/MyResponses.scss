@@ -1,21 +1,21 @@
-@import '../../scss/common.scss';
+@import "../../scss/common.scss";
 
 .list-container {
-  display: block !important;
-  height: calc(100vh - 196px);
-  width: 100%;
-  bottom: $footer-height;
-  .client-mobile & {
-    padding-top: 16px;
-    height: calc(100vh - 132px);
-  }
+    display: block !important;
+    height: calc(100vh - 196px);
+    width: 100%;
+    bottom: $footer-height;
+    .client-mobile & {
+        padding-top: 16px;
+        height: calc(100vh - 132px);
+    }
 }
 
 .my-response-item {
-   @extend .pointer-cursor;
-   height: inherit;
+    @extend .pointer-cursor;
+    height: inherit;
 }
 
 .zero-bottom-margin {
-   margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }

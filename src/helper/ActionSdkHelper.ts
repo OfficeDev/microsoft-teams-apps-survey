@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+import { Logger } from "../utils/Logger";
 import * as actionSDK from "@microsoft/m365-action-sdk";
 
 export class ActionSdkHelper {
@@ -22,7 +23,7 @@ export class ActionSdkHelper {
             let createRequest = new actionSDK.CreateAction.Request(action);
             await  actionSDK.executeApi(createRequest);
         } catch(error) {
-            console.error("Error: " + JSON.stringify(error)); //Add error log
+            Logger.logError("Error: " + JSON.stringify(error)); //Add error log
         }
     }
     /*
@@ -34,7 +35,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(new actionSDK.GetContext.Request()) as actionSDK.GetContext.Response;
             return response;
         } catch(error) {
-            console.log("Error: GetContext() "+ error);
+            Logger.logError("Error: GetContext() "+ error);
         }
     }
     /*
@@ -48,7 +49,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(getActionRequest) as actionSDK.GetAction.Response;
             return {success: true, actionInstance: response};
         } catch(error) {
-            console.log("Error: getActionInstance() "+ error);
+            Logger.logError("Error: getActionInstance() "+ error);
             return {success: false, error: error};
         }
     }
@@ -63,7 +64,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(getSummaryRequest) as actionSDK.GetActionDataRowsSummary.Response;
             return response;
         } catch(error) {
-            console.log("Error: getActionSummary() "+ error);
+            Logger.logError("Error: getActionSummary() "+ error);
         }
     }
     /*
@@ -81,7 +82,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(getDataRowsRequest) as actionSDK.GetActionDataRows.Response;
             return response;
         } catch(error) {
-            console.log("Error: getActionDataRows() "+ error);
+            Logger.logError("Error: getActionDataRows() "+ error);
         }
     }
     /*
@@ -95,7 +96,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(getSubscriptionCount) as actionSDK.GetSubscriptionMemberCount.Response;
             return response;
         } catch(error) {
-            console.log("Error: getMemberCount() "+ error);
+            Logger.logError("Error: getMemberCount() "+ error);
         }
     }
     /*
@@ -110,7 +111,7 @@ export class ActionSdkHelper {
             let responseResponders = await actionSDK.executeApi(requestResponders) as actionSDK.GetSubscriptionMembers.Response;
             return responseResponders;
         } catch(error) {
-            console.log("Error: getResponderDetails() "+ error);
+            Logger.logError("Error: getResponderDetails() "+ error);
         }
     }
 
@@ -126,7 +127,7 @@ export class ActionSdkHelper {
             let responseNonResponders = await actionSDK.executeApi(requestNonResponders) as actionSDK.GetActionSubscriptionNonParticipants.Response;
             return  responseNonResponders;
         } catch(error) {
-            console.log("Error: getNonResponders() "+ error);
+            Logger.logError("Error: getNonResponders() "+ error);
         }
     }
 
@@ -141,7 +142,7 @@ export class ActionSdkHelper {
             let response = await actionSDK.executeApi(request) as actionSDK.DeleteAction.Response;
             return response;
         } catch(error) {
-            console.log("Error: deleteActionInstance() "+ error);
+            Logger.logError("Error: deleteActionInstance() "+ error);
         }
 
     }
@@ -161,7 +162,7 @@ export class ActionSdkHelper {
             let downloadResponse = await actionSDK.executeApi(downloadCSVRequest) as actionSDK.DownloadActionDataRowsResult.Response;
             return downloadResponse;
         } catch(error) {
-            console.log("Error: downloadResponseAsCSV() "+ error);
+            Logger.logError("Error: downloadResponseAsCSV() "+ error);
         }
     }
 
@@ -176,7 +177,7 @@ export class ActionSdkHelper {
             let updateActionResponse = await actionSDK.executeApi(updateActionRequest) as actionSDK.UpdateAction.Response;
             return updateActionResponse;
         } catch(error) {
-            console.log("Error: updateActionInstanceStatus() "+ error);
+            Logger.logError("Error: updateActionInstanceStatus() "+ error);
         }
     }
 
@@ -188,7 +189,7 @@ export class ActionSdkHelper {
             let closeViewRequest = new actionSDK.CloseView.Request();
             await actionSDK.executeApi(closeViewRequest);
         } catch(error) {
-            console.log("Error: closeCardView() "+ error);
+            Logger.logError("Error: closeCardView() "+ error);
         }
     }
 
@@ -207,7 +208,7 @@ export class ActionSdkHelper {
             let addOrUpdateResponse = await actionSDK.executeApi(addOrUpdateRowsRequest) as actionSDK.AddOrUpdateActionDataRows.Response;
             return addOrUpdateResponse;
         } catch(error) {
-            console.log("Error: addOrUpdateDataRows() "+ error);
+            Logger.logError("Error: addOrUpdateDataRows() "+ error);
         }
     }
 

@@ -58,7 +58,6 @@ export namespace ActionModelHelper {
             actionInstanceRow.createTime = Date.now();
         }
         actionInstanceRow.updateTime = Date.now();
-        //}
     }
 
     export function prepareActionInstanceRows(

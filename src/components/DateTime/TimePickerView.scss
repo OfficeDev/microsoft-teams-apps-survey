@@ -1,59 +1,59 @@
 @import "./../../scss/common.scss";
 
 .time-input-view > input {
-  width: 150px;
-  cursor: pointer;
-  .date-time-equal & {
-    width: 100%;
-  }
+    width: 150px;
+    cursor: pointer;
+    .date-time-equal & {
+        width: 100%;
+    }
 }
 
 .time-input-view-mob > input {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .time-input {
-  width: 100%;
+    width: 100%;
 }
 
 .hidden-time-input-mob {
-  -webkit-appearance: none;
-  border: none;
-  background: transparent;
-  color: transparent;
-  width: 0px;
-  height: 1px;
-  position: absolute;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    color: transparent;
+    width: 0px;
+    height: 1px;
+    position: absolute;
 }
 .chevron {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .time-picker-items-list-container {
-  height: 200px;
-  width: 122px;
-  overflow: hidden;
-  &:hover {
-    overflow: auto;
-  }
+    height: 200px;
+    width: 122px;
+    overflow: hidden;
+    &:hover {
+        overflow: auto;
+    }
 }
 
 .list-item:hover {
-  background-color: rgb(243, 242, 241) !important;
-  color: $black-color !important;
+    background-color: rgb(243, 242, 241) !important;
+    color: $black-color !important;
 }
 
 .list-item:focus {
-  background-color: rgb(243, 242, 241) !important;
-  outline-color: rgb(0, 0, 0) !important;
-  outline-width: 1px !important; 
-  color: $black-color !important;
-  margin: 2px !important;
+    background-color: rgb(243, 242, 241) !important;
+    outline-color: rgb(0, 0, 0) !important;
+    outline-width: 1px !important;
+    color: $black-color !important;
+    margin: 2px !important;
 }
 
 .time-picker-preview-container {
-  .date-time-equal & {
-    width: 48%;
-    margin-right: 0px !important;
-  }
+    .date-time-equal & {
+        width: 48%;
+        margin-right: 0px !important;
+    }
 }

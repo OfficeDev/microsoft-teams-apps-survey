@@ -7,7 +7,7 @@ import { Input, InputProps } from "@fluentui/react-northstar";
 import { Localizer } from "../../../utils/Localizer";
 
 export class NumericAnswerView extends React.Component<IQuestionProps> {
-    
+
     //The max value for numeric is taken based on the most significant digit allowed for INT64 value
     readonly SURVEY_NUMERIC_MAX_VALUE = 999999999999999;
 

@@ -6,6 +6,7 @@ import { orchestrator } from "satcheljs";
 import { sendAction, previewAction, setSendingFlag, setValidationMode, initialize, setAppInitialized, goToPage, updateActiveQuestionIndex, setSendSurveyAlertOpen, setShouldFocusOnError, fetchCurrentContext, setContext } from "../actions/CreationActions";
 import getStore, { Page } from "../store/CreationStore";
 import { UxUtils } from "./../utils/UxUtils";
+import { Logger } from "./../utils/Logger";
 import { toJS } from "mobx";
 import { initializeExternal } from "./../actions/ResponseActions";
 import { SurveyUtils } from "../utils/SurveyUtils";
@@ -39,7 +40,7 @@ orchestrator(sendAction, async () => {
     try {
         await ActionSdkHelper.createActionInstance(actionInstance);
     } catch(error) {
-        console.error("Error: " + JSON.stringify(error)); //Add error log
+        Logger.logError("Error: " + JSON.stringify(error)); //Add error log
     }
 });
 

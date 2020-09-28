@@ -1,99 +1,99 @@
 @import "./../../scss/mixin.scss";
 
 .date-input-view > input {
-  width: 150px;
-  cursor: pointer;
-  .date-time-equal & {
-    width: 100%;
-  }
+    width: 150px;
+    cursor: pointer;
+    .date-time-equal & {
+        width: 100%;
+    }
 }
 .calendar-icon {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .date-input-view-mob > input {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .date-input {
-  width: 100%;
+    width: 100%;
 }
 
 .ms-DatePicker-header {
-  padding-top: 7px;
-  @include resolve-dir(padding-right, 6px);
-  padding-bottom: 5px;
-  @include resolve-dir(padding-left, 6px);
-  height: auto !important;
-  box-sizing: border-box;
-  border-bottom: 1px solid rgb(237, 235, 233);
+    padding-top: 7px;
+    @include resolve-dir(padding-right, 6px);
+    padding-bottom: 5px;
+    @include resolve-dir(padding-left, 6px);
+    height: auto !important;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(237, 235, 233);
 }
 
 .ms-FocusZone {
-  padding-top: 5px;
-  @include resolve-dir(padding-right, 7px);
-  padding-bottom: 6px;
-  @include resolve-dir(padding-left, 7px);
+    padding-top: 5px;
+    @include resolve-dir(padding-right, 7px);
+    padding-bottom: 6px;
+    @include resolve-dir(padding-left, 7px);
 }
 
 .ms-DatePicker .ms-DatePicker-wrap {
-  @include resolve-dir(padding-left, 0px);
-  padding-top: 0px;
-  padding-bottom: 0px;
-  @include resolve-dir(padding-right, 0px);
+    @include resolve-dir(padding-left, 0px);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    @include resolve-dir(padding-right, 0px);
 }
 
 .hidden-date-input-mob {
-  -webkit-appearance: none;
-  border: none;
-  background: transparent;
-  color: transparent;
-  width: 0px;
-  height: 1px;
-  position: absolute;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    color: transparent;
+    width: 0px;
+    height: 1px;
+    position: absolute;
 }
 
 .cursor-default {
-  cursor: default;
+    cursor: default;
 }
 
 .cursor-default > input {
-  cursor: default;
+    cursor: default;
 }
 
 .date-picker-preview-container {
-  .date-time-equal & {
-    width: 48%;
-    margin-right: 0px !important;
-  }
+    .date-time-equal & {
+        width: 48%;
+        margin-right: 0px !important;
+    }
 }
 
 .dayIsDisabled {
-  background: #fff;
-  color: #c8c6c4;
-  .theme-dark & {
-    color: #605e5c;
-    background: #2d2c2c;
-  }
-  .theme-contrast & {
-    background: #000;
-    color: #fff;
-  }
+    background: #fff;
+    color: #c8c6c4;
+    .theme-dark & {
+        color: #605e5c;
+        background: #2d2c2c;
+    }
+    .theme-contrast & {
+        background: #000;
+        color: #fff;
+    }
 }
 
 .ms-DatePicker-day--disabled {
-  .theme-dark & {
-    color: #605e5c;
-  }
+    .theme-dark & {
+        color: #605e5c;
+    }
 }
 .divider {
-  border-color: #edebe9 !important;
-  .theme-dark & {
-    border-color: #3b3a3a !important;
-  }
-  .theme-contrast & {
-    border-color: #000 !important;
-  }
+    border-color: #edebe9 !important;
+    .theme-dark & {
+        border-color: #3b3a3a !important;
+    }
+    .theme-contrast & {
+        border-color: #000 !important;
+    }
 }
 .ms-DatePicker-day .ms-DatePicker-day--today,
 .ms-DatePicker-day .ms-DatePicker-day--today:active,
@@ -101,35 +101,35 @@
 .ms-DatePicker-monthOption[aria-selected="true"],
 .ms-DatePicker-monthOption[aria-selected="true"]:active,
 .ms-DatePicker-monthOption[aria-selected="true"]:hover {
-  border-radius: 2px;
-  background: #6264a7;
-  color: #ffffff;
-  .theme-dark & {
-    background: #a6a7dc;
-    color: #201f1f;
-  }
-  .theme-contrast & {
-    background: #00ebff;
-    color: #000;
-  }
+    border-radius: 2px;
+    background: #6264a7;
+    color: #ffffff;
+    .theme-dark & {
+        background: #a6a7dc;
+        color: #201f1f;
+    }
+    .theme-contrast & {
+        background: #00ebff;
+        color: #000;
+    }
 }
 .ms-DatePicker-day--infocus {
-  color: #484644;
-  .theme-dark & {
-    color: #c8c6c4;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    color: #484644;
+    .theme-dark & {
+        color: #c8c6c4;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 .ms-DatePicker-day--outfocus {
-  color: #c8c6c4;
-  .theme-dark & {
-    color: #605e5c;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    color: #c8c6c4;
+    .theme-dark & {
+        color: #605e5c;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 .ms-DatePicker-day--highlighted,
 .ms-DatePicker-day--highlighted:hover,
@@ -137,131 +137,131 @@
 .ms-DatePicker-monthOption[aria-selected="true"][tabindex="-1"],
 .ms-DatePicker-monthOption[aria-selected="true"][tabindex="-1"]:active,
 .ms-DatePicker-monthOption[aria-selected="true"][tabindex="-1"]:hover {
-  background: #e2e2f6;
-  color: #252424;
-  .theme-dark & {
-    background: #464775;
-    color: #fff;
-  }
-  .theme-contrast & {
-    background: #00ebff;
-    color: #000;
-  }
+    background: #e2e2f6;
+    color: #252424;
+    .theme-dark & {
+        background: #464775;
+        color: #fff;
+    }
+    .theme-contrast & {
+        background: #00ebff;
+        color: #000;
+    }
 }
 .ms-DatePicker-monthAndYear {
-  color: #252424;
-  .theme-dark & {
-    color: #fff;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    color: #252424;
+    .theme-dark & {
+        color: #fff;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 .ms-DatePicker-navContainer {
-  display: inherit;
+    display: inherit;
 }
 .ms-DatePicker-navContainer button {
-  background: transparent !important;
-  color: #252424;
-  .theme-dark & {
-    color: #fff;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    background: transparent !important;
+    color: #252424;
+    .theme-dark & {
+        color: #fff;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 .ms-DatePicker-navContainer button:hover svg,
 .ms-DatePicker-navContainer button:hover svg .icons-default-fill {
-  fill: #6264a7;
-  .theme-dark & {
-    fill: #a6a7dc;
-  }
-  .theme-contrast & {
-    fill: #00ebff;
-  }
+    fill: #6264a7;
+    .theme-dark & {
+        fill: #a6a7dc;
+    }
+    .theme-contrast & {
+        fill: #00ebff;
+    }
 }
 .ms-DatePicker-navContainer svg .icons-filled,
 .ms-DatePicker-navContainer button:hover .icons-unfilled {
-  display: none;
+    display: none;
 }
 .ms-DatePicker-navContainer svg .icons-unfilled,
 .ms-DatePicker-navContainer button:hover .icons-filled {
-  display: block;
+    display: block;
 }
 .ms-DatePicker-navContainer svg,
 .ms-DatePicker-navContainer svg .icons-default-fill {
-  fill: #484644;
-  .theme-dark & {
-    fill: #c8c6c4;
-  }
-  .theme-contrast & {
-    fill: #fff;
-  }
+    fill: #484644;
+    .theme-dark & {
+        fill: #c8c6c4;
+    }
+    .theme-contrast & {
+        fill: #fff;
+    }
 }
 table td {
-  color: #252424;
-  .theme-dark & {
-    color: #fff;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    color: #252424;
+    .theme-dark & {
+        color: #fff;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 table td button {
-  cursor: pointer;
+    cursor: pointer;
 }
 table td:active,
 table td:hover,
 .ms-DatePicker-monthOption,
 .ms-DatePicker-monthOption:active,
 .ms-DatePicker-monthOption:hover {
-  background: #f3f2f1;
-  color: #252424;
-  .theme-dark & {
-    background: #201f1f;
-    color: #fff;
-  }
-  .theme-contrast & {
-    background: #ffff00 !important;
-    color: #000;
-  }
+    background: #f3f2f1;
+    color: #252424;
+    .theme-dark & {
+        background: #201f1f;
+        color: #fff;
+    }
+    .theme-contrast & {
+        background: #ffff00 !important;
+        color: #000;
+    }
 }
 table td:hover,
 .ms-DatePicker-monthOption:hover {
-  background: #f3f2f1;
-  .theme-dark & {
-    background: #201f1f;
-  }
-  .theme-contrast & {
-    background: #000;
-  }
+    background: #f3f2f1;
+    .theme-dark & {
+        background: #201f1f;
+    }
+    .theme-contrast & {
+        background: #000;
+    }
 }
 table th {
-  color: #252424;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  .theme-dark & {
-    color: #fff;
-  }
-  .theme-contrast & {
-    color: #fff;
-  }
+    color: #252424;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    .theme-dark & {
+        color: #fff;
+    }
+    .theme-contrast & {
+        color: #fff;
+    }
 }
 .ms-DatePicker button:focus {
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  outline: 1px solid #575454;
-  border-color: #f9f8f7;
-  .theme-dark & {
-    outline: 1px solid #f4f4f4;
-    border-color: #2d2c2c;
-  }
-  .theme-contrast & {
-    outline: 1px solid #f4f4f4;
-    border-color: #000;
-  }
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: 1px solid #575454;
+    border-color: #f9f8f7;
+    .theme-dark & {
+        outline: 1px solid #f4f4f4;
+        border-color: #2d2c2c;
+    }
+    .theme-contrast & {
+        outline: 1px solid #f4f4f4;
+        border-color: #000;
+    }
 }

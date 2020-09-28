@@ -4,7 +4,6 @@
 import * as React from "react";
 import { ProgressState } from "../../utils/SharedEnum";
 import { InputBox } from "../InputBox";
-import { LoaderUI } from "../Loader";
 import { INavBarComponentProps, NavBarItemType, NavBarComponent } from "../NavBarComponent";
 import { SettingsSections, ISettingsComponentProps, ISettingsComponentStrings, Settings } from "./Settings";
 import { ErrorView } from "../ErrorView";
@@ -95,7 +94,7 @@ export default class CreationPage extends React.Component<any, any> {
     render() {
         ActionSdkHelper.hideLoadIndicator();
         if (getStore().isInitialized === ProgressState.NotStarted) {
-            return <LoaderUI fill />;
+            return <Loader />;
         } else if (getStore().isInitialized === ProgressState.Failed) {
             return <ErrorView
                 title={Localizer.getString("GenericError")}

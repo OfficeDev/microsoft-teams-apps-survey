@@ -7,12 +7,12 @@ import getStore, { SummaryPageViewType, ResponsesListViewType } from "../../stor
 import { showResponseView, setCurrentView } from "../../actions/SummaryActions";
 import SummaryView from "./SummaryView";
 import { UserResponseView } from "./UserResponseView";
+import { Loader } from "@fluentui/react-northstar";
 import * as actionSDK from "@microsoft/m365-action-sdk";
 import { Localizer } from "../../utils/Localizer";
 import { TabView } from "./TabView";
 import ResponseAggregationView from "./ResponseAggregationView";
 import { Utils } from "../../utils/Utils";
-import { LoaderUI } from "./../Loader";
 import { ProgressState } from "./../../utils/SharedEnum";
 import { ErrorView } from "./../ErrorView";
 import { ActionSdkHelper } from "../../helper/ActionSdkHelper";
@@ -52,7 +52,7 @@ export default class SummaryPage extends React.Component<any, any> {
             || getStore().progressStatus.actionSummary != ProgressState.Completed
             || getStore().progressStatus.localizationState != ProgressState.Completed
             || getStore().progressStatus.memberCount != ProgressState.Completed) {
-            return <LoaderUI fill />;
+            return <Loader />;
         }
 
         return this.getView();

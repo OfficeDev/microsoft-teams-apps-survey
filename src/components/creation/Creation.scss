@@ -1,355 +1,355 @@
-@import '../../scss/common.scss';
+@import "../../scss/common.scss";
 @import "../../scss/mixin.scss";
 
 .survey-container {
-  padding: $parent-margin;
-  padding-bottom: 4 * $parent-margin;
+    padding: $parent-margin;
+    padding-bottom: 4 * $parent-margin;
 }
 
 .title-box {
-  font-size: 18px;
-  font-weight: bold;
-  .client-mobile & {
-    font-size: 16px;
-  }
+    font-size: 18px;
+    font-weight: bold;
+    .client-mobile & {
+        font-size: 16px;
+    }
 }
 
 .image-selector-parent {
-  margin-bottom: 20px;
-  width: 100%;
-  height: 200px;
-  background: #d8d8d8;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+    background: #d8d8d8;
 }
 .question-type-picker {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .question-box {
-  border: 1px solid #edebe9;
-  margin-bottom: 16px;
-  padding: 16px;
-  background-color: #f9f9f9;
-  position: relative;
-  .theme-dark &,
-  .theme-contrast & {
-    background-color: #3b3a3a;
-    border: solid 0.5px #484644;
-  }
-  .client-mobile & {
-    &:focus {
-      background-color: unset;
-      color: unset;
-      outline: unset;
+    border: 1px solid #edebe9;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    position: relative;
+    .theme-dark &,
+    .theme-contrast & {
+        background-color: #3b3a3a;
+        border: solid 0.5px #484644;
     }
-    border: 0px;
-    background-color: unset;
-    padding: 8px;
-    margin-bottom: 0px !important;
-  }
+    .client-mobile & {
+        &:focus {
+            background-color: unset;
+            color: unset;
+            outline: unset;
+        }
+        border: 0px;
+        background-color: unset;
+        padding: 8px;
+        margin-bottom: 0px !important;
+    }
 }
 
 .question-box.invalid {
-  .theme-default & {
-    background-color: #fce2e5;
-  }
-  .theme-dark &,
-  .theme-contrast & {
-    border: 1px solid $error-red;
-  }
+    .theme-default & {
+        background-color: #fce2e5;
+    }
+    .theme-dark &,
+    .theme-contrast & {
+        border: 1px solid $error-red;
+    }
 }
 
 .add-options-label {
-  color: #5558af;
+    color: #5558af;
 }
 
 .MCQ-setting {
-  align-items: center;
-  margin-top: 16px;
-  display: flex;
-  justify-content: flex-end;
-  .client-mobile & {
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    align-items: center;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    .client-mobile & {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .MCQ-setting-item {
-  padding: 0px !important;
+    padding: 0px !important;
 }
 
 .question-controls {
-  display: flex;
-  justify-content: flex-end;
-  @include resolve-dir(right, 20px);
+    display: flex;
+    justify-content: flex-end;
+    @include resolve-dir(right, 20px);
 }
 
 .no-border {
-  border: none !important;
+    border: none !important;
 }
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 .questionPaneTitle {
-  padding: 0px 10px 0px 0px !important;
-  margin-bottom: 16px;
-  cursor: default !important;
+    padding: 0px 10px 0px 0px !important;
+    margin-bottom: 16px;
+    cursor: default !important;
 }
 
 .questionPaneTitle.invalid {
-  .theme-default & {
-    background-color: #fce2e5;
-  }
-  .theme-dark &,
-  .theme-contrast & {
-    border: 1px solid $error-red;
-  }
+    .theme-default & {
+        background-color: #fce2e5;
+    }
+    .theme-dark &,
+    .theme-contrast & {
+        border: 1px solid $error-red;
+    }
 }
 
 label.invalid {
-  color: $error-red;
+    color: $error-red;
 }
 
 .invalid > input {
-  border-bottom: 1px solid $error-red;
+    border-bottom: 1px solid $error-red;
 }
 
 .visible {
-  display: block;
+    display: block;
 }
 
 .add-question-button {
-  padding: 0px 8px !important;
+    padding: 0px 8px !important;
 }
 
 .add-question-button > span {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .show-menu-button {
-  border-left-width: 1px !important;
-  border-left-color: #8b8cc7 !important;
+    border-left-width: 1px !important;
+    border-left-color: #8b8cc7 !important;
 }
 
 .menu-icon {
-  color: #484644;
-  .theme-contrast &,
-  .theme-dark & {
-    color: white;
-  }
+    color: #484644;
+    .theme-contrast &,
+    .theme-dark & {
+        color: white;
+    }
 }
 
 .menu-padding {
-  padding: 0px !important;
+    padding: 0px !important;
 }
 
 .settings-footer {
-  align-items: center;
-  cursor: pointer;
+    align-items: center;
+    cursor: pointer;
 }
 
 .question-base {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
 .rating-dropdown-container {
-  min-width: 0px;
-  .client-mobile & {
-    padding: 8px 0px;
-  }
+    min-width: 0px;
+    .client-mobile & {
+        padding: 8px 0px;
+    }
 }
 
 .rating-dropdown {
-  .theme-default & {
-    background-color: #f3f2f1;
-  }
-  padding: 0px 5px 0px 5px;
-  margin: 0px 5px 0px 5px;
-  border: solid 1px #f3f2f1;
-  .client-mobile & {
-    width: 140px;
-  }
+    .theme-default & {
+        background-color: #f3f2f1;
+    }
+    padding: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 5px;
+    border: solid 1px #f3f2f1;
+    .client-mobile & {
+        width: 140px;
+    }
 }
 
 .rating-dropdown ul {
-  cursor: pointer;
-  min-width: 100%;
+    cursor: pointer;
+    min-width: 100%;
 }
 
 .rating-setting {
-  align-items: center;
-  margin: 0px;
-  @include resolve-dir(margin-left, 20px);
-  display: flex;
-  .client-mobile & {
-    @include resolve-dir(margin-left, 0px);
-    flex-wrap: wrap;
-  }
+    align-items: center;
+    margin: 0px;
+    @include resolve-dir(margin-left, 20px);
+    display: flex;
+    .client-mobile & {
+        @include resolve-dir(margin-left, 0px);
+        flex-wrap: wrap;
+    }
 }
 
 .align-center {
-  align-self: center;
+    align-self: center;
 }
 
 .question-preview {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  @include resolve-dir(margin-left, 20px);
-  .client-mobile & {
-    @include resolve-dir(margin-left, 0px);
-  }
-  @include resolve-dir(margin-right, 0px);
+    margin-top: 24px;
+    margin-bottom: 16px;
+    @include resolve-dir(margin-left, 20px);
+    .client-mobile & {
+        @include resolve-dir(margin-left, 0px);
+    }
+    @include resolve-dir(margin-right, 0px);
 }
 
 .align-right {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 .required-question-checkbox {
-  margin: 16px 0px 0px 0px !important;
-  align-self: flex-end;
-  padding: 0px !important;
-  .client-mobile & {
-    align-self: flex-start;
-    margin: 24px 0px 0px 0px !important;
-  }
+    margin: 16px 0px 0px 0px !important;
+    align-self: flex-end;
+    padding: 0px !important;
+    .client-mobile & {
+        align-self: flex-start;
+        margin: 24px 0px 0px 0px !important;
+    }
 }
 
 .question-item {
-  margin-bottom: 0px !important;
-  .client-mobile & {
-    padding: 0px;
-  }
+    margin-bottom: 0px !important;
+    .client-mobile & {
+        padding: 0px;
+    }
 }
 
 .question-text {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
 .question-divider {
-  padding: 8px 0px 0px 0px !important;
-  margin-bottom: 0px !important;
-  .client-mobile & {
-    display: none;
-  }
+    padding: 8px 0px 0px 0px !important;
+    margin-bottom: 0px !important;
+    .client-mobile & {
+        display: none;
+    }
 }
 
 .choice-item-circle {
-  color: #c8c6c4;
-  align-self: center;
+    color: #c8c6c4;
+    align-self: center;
 }
 
 .left-space {
-  @include resolve-dir(margin-left, 12px);
-  .client-mobile & {
-    @include resolve-dir(margin-left, 0px);
-  }
+    @include resolve-dir(margin-left, 12px);
+    .client-mobile & {
+        @include resolve-dir(margin-left, 0px);
+    }
 }
 
 .left-zero {
-  @include resolve-dir(margin-left, 0px);
+    @include resolve-dir(margin-left, 0px);
 }
 
 .settings-summary-mobile-container {
-  padding: 32px 0px;
+    padding: 32px 0px;
 }
 
 .rating-star {
-  padding: 2px 0px;
+    padding: 2px 0px;
 }
 
 .delete-question-button {
-  padding-left: 0px !important;
+    padding-left: 0px !important;
 }
 
 .delete-question-button-container {
-  height: 48px;
-  margin-bottom: 16px;
+    height: 48px;
+    margin-bottom: 16px;
 }
 
 .delete-button-label {
-  color: #c4314b;
-  font-size: 16px;
-  @include resolve-dir(padding-left, 12px);
+    color: #c4314b;
+    font-size: 16px;
+    @include resolve-dir(padding-left, 12px);
 }
 
 .delete-button-icon {
-  color: #c4314b;
+    color: #c4314b;
 }
 
 .delete-button-divider {
-  margin-top: 16px !important;
-  margin-bottom: 0px !important;
+    margin-top: 16px !important;
+    margin-bottom: 0px !important;
 }
 
 .question-list-mobile-container {
-  margin-bottom: 16px !important;
+    margin-bottom: 16px !important;
 }
 
 .add-question-button-container {
-  margin-bottom: 24px !important;
+    margin-bottom: 24px !important;
 }
 
 .nav-bar-done {
-  color: $brand-color;
+    color: $brand-color;
 }
 
 .rating-number {
-  padding: 4px 0px;
+    padding: 4px 0px;
 }
 
 .survey-title-container {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .break-word {
-  word-break: break-word;
+    word-break: break-word;
 }
 
 .question-view-title {
-  font-weight: bold;
-  font-size: 14px;
-  .client-mobile & {
-    font-size: 16px;
-  }
+    font-weight: bold;
+    font-size: 14px;
+    .client-mobile & {
+        font-size: 16px;
+    }
 }
 
 .invalid-title {
-  border-bottom: 1px solid $error-red !important;
+    border-bottom: 1px solid $error-red !important;
 }
 
 .question-component {
-  align-items: baseline;
+    align-items: baseline;
 }
 
 .header-cover-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  overflow: none;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    overflow: none;
 }
 
 .preview-button > span {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .zero-min-width {
-  min-width: 0px;
+    min-width: 0px;
 }
 
 .optional-questions-alert-dialog {
-  @extend .dialog-base;
-  overflow-wrap: break-word;
-  width: 60% !important;
+    @extend .dialog-base;
+    overflow-wrap: break-word;
+    width: 60% !important;
 }
 
 .settings-icon {
-  @include resolve-dir(margin-right, 8px);
+    @include resolve-dir(margin-right, 8px);
 }
 
 .settings-footer {
-  cursor: pointer;
-  display: flex;
+    cursor: pointer;
+    display: flex;
 }

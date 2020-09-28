@@ -5,6 +5,7 @@ import { QuestionDisplayType } from "../components/Creation/questionContainer/Qu
 import * as actionSDK from "@microsoft/m365-action-sdk";
 import { UxUtils } from "./UxUtils";
 import { Utils } from "./Utils";
+import { Logger } from "./Logger";
 import { ButtonProps } from "@fluentui/react-northstar";
 import { Localizer } from "./Localizer";
 import { ActionSdkHelper } from "../helper/ActionSdkHelper";
@@ -107,7 +108,7 @@ export namespace SurveyUtils {
                 return {success: false, error: datarowsCall.error};
             }
         } catch (error) {
-            console.error("Error: " + JSON.stringify(error));
+            Logger.logError("Error: " + JSON.stringify(error));
             return {success: false, error: error};
         }
     }

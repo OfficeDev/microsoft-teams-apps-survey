@@ -1,12 +1,19 @@
 {
     "properties": {
-        "canAddMore": true
+        "canAddMore": true,
+        "values": [
+            {
+                "name": "Locale",
+                "valueType": "Text",
+                "isOptional": true
+            }
+        ]
     },
     "dataTables": {
         "canAddMore": false,
         "values": [
             {
-                "name": "SurveyDataTable",
+                "name": "Default",
                 "dataColumns": {
                     "canAddMore": true
                 }

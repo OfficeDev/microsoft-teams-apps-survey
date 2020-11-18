@@ -1,15 +1,35 @@
 {
+    "schemaVersion": 1,
     "view": {
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
         "version": "1.0",
         "body": [
             {
+                "id": "active",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Active')}",
+                "text": "${formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime)))}",
+                "_text.comment": "due date if survey is active",
+                "color": "default",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "close",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Closed')}",
+                "text": "${strings.SurveyClosed}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
                 "id": "expiry",
                 "type": "TextBlock",
-                "text": "${if(equals(action.status, 'Active'), formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime))),strings.SurveyExpired)}",
-                "_text.comment": "due date if survey is active, else show survey expired string",
-                "color": "${if(equals(action.status, 'Active'), 'default','attention')}",
+                "$when":"${equals(action.status, 'Expired')}",
+                "text": "${strings.SurveyExpired}",
+                "color": "attention",
                 "size": "small",
                 "wrap": true
             },

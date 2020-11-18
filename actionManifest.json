@@ -1,4 +1,5 @@
 {
+    "schemaVersion": 1,
     "tag": "survey-teams-app",
     "id": "<packageId>",
     "name": "Survey",

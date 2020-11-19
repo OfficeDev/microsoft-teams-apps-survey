@@ -270,7 +270,7 @@
   "$manifest.name": "Encuesta",
   "$manifest.msTeamsProps.name.short": "Encuesta",
   "$manifest.msTeamsProps.name.full": "Encuesta",
-  "$manifest.msTeamsProps.description.short": "Reunir datos de compañeros de trabajo",
+  "$manifest.msTeamsProps.description.short": "Reunir datos de tus compañeros de trabajo",
   "$manifest.msTeamsProps.description.full": "Haga una serie de preguntas y obtenga información procesable creando una encuesta en un chat o canal. Utilice la encuesta para - Registros | Inscripciones | Comentarios | Testimonios | Captación de clientes potenciales | Aplicaciones | Informes | Quejas | Evaluaciones​. Busque la aplicación en \"...\" bajo el cuadro de composición de mensajes​. Da un nombre a su encuesta y agrega preguntas. Ya está todo listo. Mantente al tanto de la participación haciendo un seguimiento de las respuestas​. Ve los resultados de la encuesta y descárgalos para compartirlos con tus compañeros de trabajo.",
   "$manifest.views.LaunchView.header": "Crear encuesta"
 }

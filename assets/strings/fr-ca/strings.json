@@ -267,10 +267,10 @@
   "SingleResponseNotification": "1 réponse reçue sur votre enquête",
   "Respond": "Répondre",
   "$manifest.description": "Posez une série de questions et obtenez des informations exploitables en créant une enquête dans une session de clavardage ou un canal. Utilisez l’enquête pour les enregistrements : Inscriptions | Adhésions | Rétroaction | Témoignages | Capture de prospect | Applications | Création de rapports | Réclamations | Évaluations​. Trouvez l’application dans «…» sous la zone de composition du message​\n• Nommez votre enquête et ajoutez des questions. Vous êtes prêt à aller plus loin. Restez au niveau de la participation en suivant les réponses​. Affichez les résultats de l’enquête et les télécharger pour les partager avec vos collègues",
-  "$manifest.name": "Enquête",
-  "$manifest.msTeamsProps.name.short": "Enquête",
-  "$manifest.msTeamsProps.name.full": "Enquête",
-  "$manifest.msTeamsProps.description.short": "Collecter des données auprès de vos collègues",
+  "$manifest.name": "Sondage",
+  "$manifest.msTeamsProps.name.short": "Sondage",
+  "$manifest.msTeamsProps.name.full": "Sondage",
+  "$manifest.msTeamsProps.description.short": "Collectez des données auprès de vos collègues",
   "$manifest.msTeamsProps.description.full": "Posez une série de questions et obtenez des informations exploitables en créant une enquête dans un clavardage ou un canal. Utilisez l’enquête pour les enregistrements : Inscriptions | Adhésions | Rétroaction | Témoignages | Acquisition de prospect | Applications | Création de rapports | Réclamations | Évaluations​. Trouvez l’appli dans «…» sous la zone de rédaction du message​. Nommez votre enquête et ajoutez des questions. Vous êtes prêt à travailler. Restez au niveau de la participation en suivant les réponses​. Affichez les résultats de l’enquête et les télécharger pour les partager avec vos collègues",
   "$manifest.views.LaunchView.header": "Créer une enquête"
 }

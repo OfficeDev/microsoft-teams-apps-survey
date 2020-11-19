@@ -37,7 +37,7 @@ export class ErrorView extends React.Component<IErrorViewProps, any> {
                     primary
                     content={this.props.buttonTitle}
                     className="error-view-button"
-                    onClick={async() => {
+                    onClick={async () => {
                         await ActionSdkHelper.closeCardView();
                     }}
                 />

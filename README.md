@@ -26,7 +26,7 @@ Survey is a custom [Teams message extension](https://docs.microsoft.com/en-us/mi
 
 Begin with the [Solution overview](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Solution-overview) to read about what the app does and how it works.
 
-When you're ready to try out Checklist, or to use it in your own organization, follow the steps in the [Deployment guide](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Deployment-guide).
+When you're ready to try out Survey, or to use it in your own organization, follow the steps in the [Deployment guide](https://github.com/OfficeDev/Microsoft-Teams-Survey-app/wiki/Deployment-guide).
 
 ## Feedback
 

@@ -405,7 +405,7 @@ orchestrator(downloadCSV, async (msg) => {
                 getStore().context.actionId,
                 Localizer.getString(
                     "SurveyResult",
-                    getStore().actionInstance.dataTables[0].dataColumns[0].displayName
+                    getStore().actionInstance.displayName
                 ).substring(0, Constants.ACTION_RESULT_FILE_NAME_MAX_LENGTH)
             );
             if (downloadResponseCSV.success) {

@@ -1,0 +1,218 @@
+{
+    "schemaVersion": 1,
+    "view": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+                "id": "active",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Active')}",
+                "text": "${formatString(strings.dueByDate, ('' + dateString(action.expiryTime, 'SHORT') + ' ' + timeString(action.expiryTime)))}",
+                "_text.comment": "due date if survey is active",
+                "color": "default",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "close",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Closed')}",
+                "text": "${strings.SurveyClosed}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "expiry",
+                "type": "TextBlock",
+                "$when":"${equals(action.status, 'Expired')}",
+                "text": "${strings.SurveyExpired}",
+                "color": "attention",
+                "size": "small",
+                "wrap": true
+            },
+            {
+                "id": "ResultVisibilityV1",
+                "type": "TextBlock",
+                "$when": "${equals(action.dataTables[0].rowsVisibility, 'All')}",
+                "text": "${if((action.dataTables[0].canUserAddMultipleRows), strings.ResultEveryoneMultipleResponsesAllowed, strings.ResultEveryone)}",
+                "_text.comment": "sting to show if multiple response allowed and responses is visible to all",
+                "maxLines": 2,
+                "wrap": true,
+                "isSubtle": true,
+                "size": "small",
+                "spacing": "none"
+            },
+            {
+                "id": "ResultVisibilityV2",
+                "type": "TextBlock",
+                "$when": "${equals(action.dataTables[0].rowsVisibility, 'Sender')}",
+                "text": "${if((action.dataTables[0].canUserAddMultipleRows), strings.ResultCreatorMultipleResponsesAllowed, strings.ResultCreator)}",
+                "_text.comment": "sting to show if multiple response allowed and responses is visible to sender only",
+                "maxLines": 2,
+                "wrap": true,
+                "isSubtle": true,
+                "size": "small",
+                "spacing": "none"
+            },
+            {
+                "id": "Title",
+                "type": "TextBlock",
+                "text": "${action.displayName}",
+                "size": "large",
+                "maxLines": 3,
+                "wrap": true,
+                "weight": "bolder",
+                "spacing": "small"
+            },
+            {
+                "id": "Questions",
+                "type": "Container",
+                "style": "emphasis",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "${formatString(strings.Questions, count(action.dataTables[0].dataColumns))}",
+                        "size": "medium",
+                        "wrap": true,
+                        "spacing": "medium"
+                    }
+                ]
+            },
+            {
+                "id": "Responder",
+                "$when": "${equals(action.dataTables[0].rowsVisibility, 'All')}",
+                "type": "Container",
+                "items": [
+                    {
+                        "id": "NoResponder",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 0)}",
+                        "text": "${strings.BeTheFirstOneToRespond}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "OneResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 1)}",
+                        "text": "${formatString(strings.OneResponded, responders[0].displayName)}",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "TwoResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 2)}",
+                        "text": "${formatString(strings.TwoResponded, split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[0], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[1], '#')[1])}",
+                        "_text.comment": "Get the unique responder's name from the responders list, concat: idA#nameA, select(): to get the concatenated value, unique: to get all the unique string of the form idA#nameA, split((id#name)[i],#)[1]: split string at index i on # and fetch name from the string",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "ThreeResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 3)}",
+                        "text": "${formatString(strings.ThreeResponded, split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[0], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[1], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[2], '#')[1])}",
+                        "_text.comment": "Get the unique responder's name from the responders list, concat: idA#nameA, select(): to get the concatenated value, unique: to get all the unique string of the form idA#nameA, split((id#name)[i],#)[1]: split string at index i on # and fetch name from the string",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "FourResponded",
+                        "type": "TextBlock",
+                        "$when": "${equals(summary.rowCreatorCount, 4)}",
+                        "text": "${formatString(strings.ThreeAndOneOtherResponded, split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[0], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[1], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[2], '#')[1])}",
+                        "_text.comment": "Get the unique responder's name from the responders list, concat: idA#nameA, select(): to get the concatenated value, unique: to get all the unique string of the form idA#nameA, split((id#name)[i],#)[1]: split string at index i on # and fetch name from the string",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    },
+                    {
+                        "id": "MoreResponded",
+                        "type": "TextBlock",
+                        "$when": "${greater(summary.rowCreatorCount, 4)}",
+                        "text": "${formatString(strings.ThreeAndOthersResponded, split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[0], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[1], '#')[1], split(unique(select(responders, x, concat(x.id, '#', x.displayName)))[2], '#')[1], sub(summary.rowCreatorCount, 3))}",
+                        "_text.comment": "Get the unique responder's name from the responders list, concat: idA#nameA, select(): to get the concatenated value, unique: to get all the unique string of the form idA#nameA, split((id#name)[i],#)[1]: split string at index i on # and fetch name from the string",
+                        "size": "small",
+                        "weight": "bolder",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "small"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "id": "RespondButton",
+                "$when": "${equals(action.status, 'Active')}",
+                "title": "${strings.TakeSurvey}",
+                "command": "LaunchActionPackageView",
+                "parameters": {
+                    "viewName": "UpdateView"
+                }
+            },
+            {
+                "id": "ResultButton",
+                "title": "${strings.ViewResults}",
+                "command": "LaunchActionPackageView",
+                "parameters": {
+                    "viewName": "DetailView"
+                }
+            }
+        ]
+    },
+    "data": {
+        "strings": {
+            "command": "GetLocalizedStrings"
+        },
+        "action": {
+            "command": "GetAction"
+        },
+        "summary": {
+            "command": "GetActionDataRowsSummary",
+            "parameters": {
+                "addDefaultAggregates": true
+            }
+        },
+        "creator": {
+            "command": "GetSubscriptionMembers",
+            "parameters": {
+                "memberIds": [
+                    "$ActionCreator"
+                ]
+            }
+        },
+        "datarow": {
+            "command": "GetActionDataRows",
+            "parameters": {
+                "pageSize": 20
+            }
+        },
+        "responders": {
+            "command": "GetSubscriptionMembers",
+            "parameters": {
+                "memberIds": [
+                    "$ActionDataRowCreators"
+                ]
+            }
+        }
+    }
+}
